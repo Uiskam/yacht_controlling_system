@@ -1,0 +1,86 @@
+package UserInterface
+public
+	with SEI;
+	
+	bus RAMDataBus
+	end RAMDataBus;
+	
+	bus SDCardDataBus
+	end SDCardDataBus;
+	
+	bus TouchScreenBus
+	end TouchScreenBus;
+	
+	memory RAM
+		features
+			data_bus : requires bus access RAMDataBus;
+	    properties
+	        SEI::RAMCapacity => 1.0 GByte;
+	end RAM;
+      
+	memory SD_Card
+		features
+			data_bus : requires bus access SDCardDataBus;
+	    properties
+	        Memory_Size => 16 GByte;
+	end SD_Card;
+	
+	device Touchscreen
+	    features
+	        input_port : in data port;
+	    
+	end Touchscreen;
+	
+	thread UserInputThread
+	    features
+	        input_data : in data port;
+	    properties
+	        Dispatch_Protocol => Periodic;
+	        Period => 100 ms;
+	end UserInputThread;
+	
+	thread implementation UserInputThread.impl
+	end UserInputThread.impl;
+	
+	process UserInputProcess
+	    features
+	        input_data : in data port;
+	end UserInputProcess;
+	
+	process implementation UserInputProcess.impl
+		subcomponents  
+			UserInput : thread UserInputThread.impl;
+	end UserInputProcess.impl;
+	
+	processor UserInterfaceProcessor
+	    features
+	        RAM_access : requires bus access RAMDataBus;
+	        mem_access : requires bus access SDCardDataBus;
+	end UserInterfaceProcessor;
+	
+	system UserInterface
+	end UserInterface;
+	
+	system implementation UserInterface.Impl
+	    subcomponents
+	        ram : memory RAM;
+	        sd_card : memory SD_Card;
+	        touchscreen : device Touchscreen;
+	        user_processor : processor UserInterfaceProcessor;
+	        user_process: process UserInputProcess.impl;
+	        ram_bus: bus RAMDataBus;
+	        sd_bus: bus SDCardDataBus;
+	    connections
+	        proc_to_ram_bus: bus access ram_bus -> user_processor.ram_access;
+	        ram_to_ram_bus: bus access ram_bus -> ram.data_bus;
+	        proc_to_sd_bus: bus access sd_bus -> user_processor.mem_access;
+	        ram_to_sd_bus: bus access sd_bus -> sd_card.data_bus;
+	    properties
+  			Actual_Connection_Binding  => (reference(ram_bus)) applies to proc_to_ram_bus;
+  			Actual_Connection_Binding  => (reference(ram_bus)) applies to ram_to_ram_bus;
+  			Actual_Connection_Binding  => (reference(sd_bus)) applies to proc_to_sd_bus;
+  			Actual_Connection_Binding  => (reference(sd_bus)) applies to ram_to_sd_bus;
+  			Actual_Processor_Binding => (reference(user_processor)) applies to user_process; 
+	end UserInterface.Impl;
+	
+end UserInterface;
