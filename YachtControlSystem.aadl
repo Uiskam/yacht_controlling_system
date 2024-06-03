@@ -1,4 +1,33 @@
 package YachtControlSystem
 public
+	with Data_Model;
+	with Base_Types;
+	with DataTypes;
+	
+	-- Processor Component--
+	processor CentralProcessor
+		features
+			in_apparent_wind_direction: in data port DataTypes::ApparentWindDirection;
+			in_apparent_wind_speed: in data port DataTypes::ApparentWindSpeed;
+			in_compass: in data port DataTypes::Compass;
+			in_gps_position: in data port DataTypes::GPSPosition;
+			in_depth: in data port DataTypes::Depth;
+			in_gyroscope: in data port DataTypes::Gyroscope;
+			in_ais: in data port DataTypes::AISUnits;
+			in_auto_navigation: in data port DataTypes::AutoNavigation;
+			out_apparent_wind_direction: out data port DataTypes::ApparentWindDirection;
+			out_apparent_wind_speed: out data port DataTypes::ApparentWindSpeed;
+			out_true_wind_direction: out data port DataTypes::RealWindDirection;
+			out_true_wind_speed: out data port DataTypes::RealWindSpeed;
+			out_sog: out data port DataTypes::SOG;
+			out_current_depth: out data port DataTypes::Depth;
+			out_compass_course: out data port DataTypes::CompassCourse;
+        	out_gps_course: out data port DataTypes::GPSCourse;
+        	out_gps_position: out data port DataTypes::GPSPosition;
+        	out_current_heel: out data port DataTypes::CurrentHeel;
+        	out_units_nearby: out data port DataTypes::AISUnits;
+        	out_rudder_position: out data port DataTypes::RudderPosition;
+			
+	end CentralProcessor;
 	
 end YachtControlSystem;
