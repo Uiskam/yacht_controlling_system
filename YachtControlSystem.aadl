@@ -68,6 +68,86 @@ public
 			Period => 500 ms;
 	end RudderControlThread;
 	
+	process WindDirectionSensorProcess
+		features
+			out_data: out data port DataTypes::ApparentWindDirection;
+	end WindDirectionSensorProcess;
+	
+	process implementation WindDirectionSensorProcess.impl
+		subcomponents
+			prod: thread WindDirectionSensorThread;
+	end WindDirectionSensorProcess.impl;
+	
+	process WindSpeedSensorProcess
+		features
+			out_data: out data port DataTypes::ApparentWindSpeed;
+	end WindSpeedSensorProcess;
+	
+	process implementation WindSpeedSensorProcess.impl
+		subcomponents
+			prod: thread WindSpeedSensorThread;
+	end WindSpeedSensorProcess.impl;
+		
+	process CompassSensorProcess
+		features
+			out_data: out data port DataTypes::Compass;
+	end CompassSensorProcess;
+	
+	process implementation CompassSensorProcess.impl
+		subcomponents
+			prod: thread CompassSensorThread;
+	end CompassSensorProcess.impl;
+		
+	process GPSSensorProcess
+		features
+			out_data: out data port DataTypes::GPSPosition;
+	end GPSSensorProcess;
+	
+	process implementation GPSSensorProcess.impl
+		subcomponents
+			prod: thread GPSSensorThread;
+	end GPSSensorProcess.impl;
+		
+	process DepthSensorProcess
+		features
+			out_data: out data port DataTypes::Depth;
+	end DepthSensorProcess;
+	
+	process implementation DepthSensorProcess.impl
+		subcomponents
+			prod: thread DepthSensorThread;
+	end DepthSensorProcess.impl;
+	
+	process GyroscopeSensorProcess
+		features
+			out_data: out data port DataTypes::Gyroscope;
+	end GyroscopeSensorProcess;
+	
+	process implementation GyroscopeSensorProcess.impl
+		subcomponents
+			prod: thread GyroscopeSensorThread;
+	end GyroscopeSensorProcess.impl;
+	
+	process RudderControlProcess
+		features
+			in_control: in data port DataTypes::RudderPosition;
+	end RudderControlProcess;
+	
+	process implementation RudderControlProcess.impl
+		subcomponents
+			prod: thread RudderControlThread;
+	end RudderControlProcess.impl;
+	
+	process AISSystemProcess
+		features
+			out_data: out data port DataTypes::AISUnits;
+	end AISSystemProcess;
+	
+	process implementation AISSystemProcess.impl
+		subcomponents
+			prod: thread AISSystemThread;
+	end AISSystemProcess.impl;
+	
 	-- Processor Component--
 	processor CentralProcessor
 		features
