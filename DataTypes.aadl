@@ -131,8 +131,9 @@ public
     
     data AutoNavigation extends NMEA2000_Header
         properties
-			Data_Model::Data_Representation => Enum;
+			Data_Model::Data_Representation => Integer;
 			Data_Model::Enumerators => ("OFF", "WIND", "DIRECT");
+			Data_Size => 9 Bits;
     end AutoNavigation;
   
   
