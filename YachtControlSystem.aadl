@@ -4,6 +4,70 @@ public
 	with Base_Types;
 	with DataTypes;
 	
+	thread WindDirectionSensorThread
+		features
+			out_data: out data port DataTypes::ApparentWindDirection;
+		properties
+			Dispatch_Protocol => Periodic;
+			Period => 500 ms;
+	end WindDirectionSensorThread;
+
+	thread WindSpeedSensorThread
+		features
+			out_data: out data port DataTypes::ApparentWindSpeed;
+		properties
+			Dispatch_Protocol => Periodic;
+			Period => 500 ms;
+	end WindSpeedSensorThread;
+
+	thread CompassSensorThread
+		features
+			out_data: out data port DataTypes::Compass;
+		properties
+			Dispatch_Protocol => Periodic;
+			Period => 500 ms;
+	end CompassSensorThread;
+
+	thread GPSSensorThread
+		features
+			out_data: out data port DataTypes::GPSPosition;
+		properties
+			Dispatch_Protocol => Periodic;
+			Period => 500 ms;
+	end GPSSensorThread;
+
+	thread DepthSensorThread
+		features
+			out_data: out data port DataTypes::Depth;
+		properties
+			Dispatch_Protocol => Periodic;
+			Period => 500 ms;
+	end DepthSensorThread;
+
+	thread GyroscopeSensorThread
+		features
+			out_data: out data port DataTypes::Gyroscope;
+		properties
+			Dispatch_Protocol => Periodic;
+			Period => 500 ms;
+	end GyroscopeSensorThread;
+	
+	thread AISSystemThread
+		features
+			out_data: out data port DataTypes::AISUnits;
+		properties
+			Dispatch_Protocol => Periodic;
+			Period => 500 ms;
+	end AISSystemThread;
+	
+	thread RudderControlThread
+		features
+			in_control: in data port DataTypes::RudderPosition;
+		properties
+			Dispatch_Protocol => Periodic;
+			Period => 500 ms;
+	end RudderControlThread;
+	
 	-- Processor Component--
 	processor CentralProcessor
 		features
