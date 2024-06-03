@@ -1,4 +1,46 @@
 package Devices
 public
+	with DataTypes;
+	
+	device AISSystem
+	    features
+	        out_data: out data port DataTypes::AISUnits;
+	end AISSystem;
+	
+	--Sensor components--
+	device WindDirectionSensor
+	    features
+	        out_data: out data port DataTypes::ApparentWindDirection;
+	end WindDirectionSensor;
+	
+	device WindSpeedSensor
+	    features
+	        out_data: out data port DataTypes::ApparentWindSpeed;
+	end WindSpeedSensor;
+	
+	device CompassSensor
+	    features
+	        out_data: out data port DataTypes::Compass;
+	end CompassSensor;
+	
+	device GPSSensor
+	    features
+	        out_data: out data port DataTypes::GPSPosition;
+	end GPSSensor;
+	
+	device DepthSensor
+	    features
+	        out_data: out data port DataTypes::Depth;
+	end DepthSensor;
+	
+	device GyroscopeSensor
+	    features
+	        out_data: out data port DataTypes::Gyroscope;
+	end GyroscopeSensor;
+	
+	device Rudder
+	    features
+	        in_control: in data port DataTypes::RudderPosition;
+	end Rudder;
 	
 end Devices;
