@@ -1,0 +1,14 @@
+package DataTypes
+public
+	data Message
+  		features
+    		priority: in data port;
+    		PGN: in data port;
+    		source_address: in data port;
+  		properties
+    		Data_Size => 3 bits applies to priority;
+    		Data_Size => 18 bits applies to PGN;
+    		Data_Size => 8 bits applies to source_address;
+			Encoding => Binary;
+  end Message;
+end DataTypes;
