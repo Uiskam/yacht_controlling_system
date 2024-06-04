@@ -38,6 +38,17 @@ public
 	    subcomponents
 	        central_processor: processor CentralProcessor;
 	        ais_system: device Devices::AISSystem;
+	        wind_direction_sensor: device Devices::WindDirectionSensor;
+	        wind_speed_sensor: device Devices::WindSpeedSensor;
+	        compass_sensor: device Devices::CompassSensor;
+	        gps_sensor: device Devices::GPSSensor;
+	        depth_sensor: device Devices::DepthSensor;
+	        gyroscope_sensor: device Devices::GyroscopeSensor;
+	        rudder_device: device Devices::Rudder;
+	        user_interface_device: device Devices::UserInterface;
+	        rudder: device Devices::Rudder;
+	        user_interface: device Devices::UserInterface;
+	        ais_system_process: process Processes::AISSystemProcess;
 	        wind_direction_sensor_process: process Processes::WindDirectionSensorProcess.impl;
 	        wind_speed_sensor_process: process Processes::WindSpeedSensorProcess.impl;
 	        compass_sensor_process: process Processes::CompassSensorProcess.impl;
@@ -45,7 +56,9 @@ public
 	        depth_sensor_process: process Processes::DepthSensorProcess.impl;
 	        gyroscope_sensor_process: process Processes::GyroscopeSensorProcess.impl;
 	        rudder_control_process: process Processes::RudderControlProcess.impl;
-   
+	        data_to_user_interface_process: process Processes::DataToUserInterfaceProcess.impl;
+            data_from_user_interface_process: process Processes::DataFromUserInterfaceProcess.impl;
+        
     end YachtControlSystem.Impl;
 	
 	
