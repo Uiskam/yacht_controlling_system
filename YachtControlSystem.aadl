@@ -81,7 +81,8 @@ public
 			depth2user: port data_to_user_interface.out_depth -> user_interface.in_depth;
 			gyro2user: port data_to_user_interface.out_gyro -> user_interface.in_gyro;
 			
-			
+			auto_nav: port user_interface.out_auto_navigation -> nav_process.in_auto_navigation;
+			rudder2proc: port nav_process.out_rudder_instructions -> rudder.in_control;
 			
 		properties
 			Actual_Connection_Binding => (reference(main_bus)) applies to main_bus2cpu;
@@ -116,6 +117,9 @@ public
 			Actual_Connection_Binding => (reference(main_bus)) applies to gps2user;
 			Actual_Connection_Binding => (reference(main_bus)) applies to depth2user;
 			Actual_Connection_Binding => (reference(main_bus)) applies to gyro2user;
+			
+			Actual_Connection_Binding => (reference(main_bus)) applies to auto_nav;
+			Actual_Connection_Binding => (reference(main_bus)) applies to rudder2proc;
 			
 			
 			
