@@ -73,6 +73,14 @@ public
 			depth2proc: port depth_sensor.out_data -> data_from_sensors.in_depth;
 			gyro2proc: port gyroscope_sensor.out_data -> data_from_sensors.in_gyro;
 			
+			ais2user: port data_to_user_interface.out_ais -> user_interface.in_ais;
+			wind_dir2user: port data_to_user_interface.out_wind_dir -> user_interface.in_wind_dir;
+			wind_speed2user: port data_to_user_interface.out_wind_speed-> user_interface.in_wind_speed;
+			comapss2user: port data_to_user_interface.out_compass -> user_interface.in_compass;
+			gps2user: port data_to_user_interface.out_gps -> user_interface.in_gps;
+			depth2user: port data_to_user_interface.out_depth -> user_interface.in_depth;
+			gyro2user: port data_to_user_interface.out_gyro -> user_interface.in_gyro;
+			
 			
 			
 		properties
@@ -100,6 +108,14 @@ public
 			Actual_Connection_Binding => (reference(main_bus)) applies to gps2proc;
 			Actual_Connection_Binding => (reference(main_bus)) applies to depth2proc;
 			Actual_Connection_Binding => (reference(main_bus)) applies to gyro2proc;
+			
+			Actual_Connection_Binding => (reference(main_bus)) applies to ais2user;
+			Actual_Connection_Binding => (reference(main_bus)) applies to wind_dir2user;
+			Actual_Connection_Binding => (reference(main_bus)) applies to wind_speed2user;
+			Actual_Connection_Binding => (reference(main_bus)) applies to comapss2user;
+			Actual_Connection_Binding => (reference(main_bus)) applies to gps2user;
+			Actual_Connection_Binding => (reference(main_bus)) applies to depth2user;
+			Actual_Connection_Binding => (reference(main_bus)) applies to gyro2user;
 			
 			
 			
