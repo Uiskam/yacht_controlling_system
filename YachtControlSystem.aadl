@@ -3,6 +3,8 @@ public
 	with Data_Model;
 	with Base_Types;
 	with DataTypes;
+	with Processes;
+	with Devices;
 	
 	-- Processor Component--
 	processor CentralProcessor
@@ -26,8 +28,26 @@ public
         	out_gps_position: out data port DataTypes::GPSPosition;
         	out_current_heel: out data port DataTypes::CurrentHeel;
         	out_units_nearby: out data port DataTypes::AISUnits;
-        	out_rudder_position: out data port DataTypes::RudderPosition;
-			
+        	out_rudder_position: out data port DataTypes::RudderPosition;		
 	end CentralProcessor;
+	system YachtControlSystem
+		
+	end YachtControlSystem;
+	
+	system implementation YachtControlSystem.Impl
+	    subcomponents
+	        central_processor: processor CentralProcessor;
+	        ais_system: device Devices::AISSystem;
+	        wind_direction_sensor_process: process Processes::WindDirectionSensorProcess.impl;
+	        wind_speed_sensor_process: process Processes::WindSpeedSensorProcess.impl;
+	        compass_sensor_process: process Processes::CompassSensorProcess.impl;
+	        gps_sensor_process: process Processes::GPSSensorProcess.impl;
+	        depth_sensor_process: process Processes::DepthSensorProcess.impl;
+	        gyroscope_sensor_process: process Processes::GyroscopeSensorProcess.impl;
+	        rudder_control_process: process Processes::RudderControlProcess.impl;
+   
+    end YachtControlSystem.Impl;
+	
+	
 	
 end YachtControlSystem;
