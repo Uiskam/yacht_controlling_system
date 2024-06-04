@@ -31,7 +31,7 @@ public
     end NMEA2000_Header.impl;
     
     
-    data ApparentWindDirection extends NMEA2000_Header 
+    data ApparentWindDirection extends NMEA2000_Header
 		properties
 			Data_Model::Data_Representation => Integer;
             Data_Model::base_type => (classifier (Base_Types::Integer));

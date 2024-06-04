@@ -61,6 +61,8 @@ public
 	system UserInterface
 	end UserInterface;
 	
+	
+	
 	system implementation UserInterface.Impl
 	    subcomponents
 	        ram : memory RAM;

@@ -7,47 +7,45 @@ public
 	with Devices;
 	
 	-- Processor Component--
+	
+	
+	system YachtControlSystem
+	end YachtControlSystem;
+	
+	
+	memory CentralCPUMemory
+	features
+		main_bus: requires bus access Devices::MainBus.impl;
+	end CentralCPUMemory;
+
+	memory implementation CentralCPUMemory.impl
+	end CentralCPUMemory.impl;
+	
 	processor CentralProcessor
 		features
-			in_apparent_wind_direction: in data port DataTypes::ApparentWindDirection;
-			in_apparent_wind_speed: in data port DataTypes::ApparentWindSpeed;
-			in_compass: in data port DataTypes::Compass;
-			in_gps_position: in data port DataTypes::GPSPosition;
-			in_depth: in data port DataTypes::Depth;
-			in_gyroscope: in data port DataTypes::Gyroscope;
-			in_ais: in data port DataTypes::AISUnits;
-			in_auto_navigation: in data port DataTypes::AutoNavigation;
-			out_apparent_wind_direction: out data port DataTypes::ApparentWindDirection;
-			out_apparent_wind_speed: out data port DataTypes::ApparentWindSpeed;
-			out_true_wind_direction: out data port DataTypes::RealWindDirection;
-			out_true_wind_speed: out data port DataTypes::RealWindSpeed;
-			out_sog: out data port DataTypes::SOG;
-			out_current_depth: out data port DataTypes::Depth;
-			out_compass_course: out data port DataTypes::CompassCourse;
-        	out_gps_course: out data port DataTypes::GPSCourse;
-        	out_gps_position: out data port DataTypes::GPSPosition;
-        	out_current_heel: out data port DataTypes::CurrentHeel;
-        	out_units_nearby: out data port DataTypes::AISUnits;
-        	out_rudder_position: out data port DataTypes::RudderPosition;		
+			main_bus: requires bus access Devices::MainBus.impl;
+			mem_bus: requires bus access Devices::MemoryBus.impl;
 	end CentralProcessor;
-	system YachtControlSystem
-		
-	end YachtControlSystem;
+	
+	processor implementation CentralProcessor.impl
+	end CentralProcessor.impl;
 	
 	system implementation YachtControlSystem.Impl
 	    subcomponents
-	        central_processor: processor CentralProcessor;
-	        ais_system: device Devices::AISSystem;
-	        wind_direction_sensor: device Devices::WindDirectionSensor;
-	        wind_speed_sensor: device Devices::WindSpeedSensor;
-	        compass_sensor: device Devices::CompassSensor;
-	        gps_sensor: device Devices::GPSSensor;
-	        depth_sensor: device Devices::DepthSensor;
-	        gyroscope_sensor: device Devices::GyroscopeSensor;
-	        rudder_device: device Devices::Rudder;
-	        user_interface_device: device Devices::UserInterface;
-	        rudder: device Devices::Rudder;
-	        user_interface: device Devices::UserInterface;
+	        central_processor: processor CentralProcessor.impl;
+	        main_bus: bus Devices::MainBus.impl;
+	        mem_bus: bus Devices::MemoryBus.impl;
+	        
+	        ais_system: device Devices::AISSystem.impl;
+	        wind_direction_sensor: device Devices::WindDirectionSensor.impl;
+	        wind_speed_sensor: device Devices::WindSpeedSensor.impl;
+	        compass_sensor: device Devices::CompassSensor.impl;
+	        gps_sensor: device Devices::GPSSensor.impl;
+	        depth_sensor: device Devices::DepthSensor.impl;
+	        gyroscope_sensor: device Devices::GyroscopeSensor.impl;
+	        rudder: device Devices::Rudder.impl;
+	        user_interface: device Devices::UserInterface.impl;
+	        
 	        ais_system_process: process Processes::AISSystemProcess;
 	        wind_direction_sensor_process: process Processes::WindDirectionSensorProcess.impl;
 	        wind_speed_sensor_process: process Processes::WindSpeedSensorProcess.impl;
@@ -58,9 +56,45 @@ public
 	        rudder_control_process: process Processes::RudderControlProcess.impl;
 	        data_to_user_interface_process: process Processes::DataToUserInterfaceProcess.impl;
             data_from_user_interface_process: process Processes::DataFromUserInterfaceProcess.impl;
+		connections
+			main_bus2cpu: bus access main_bus -> central_processor.main_bus;
+			mem_bus2cpu: bus access mem_bus -> central_processor.mem_bus;
+			
+			main_bus2ais: bus access main_bus -> ais_system.main_bus;
+			main_bus2wind_dir: bus access main_bus -> wind_direction_sensor.main_bus;
+			main_bus2wind_speed: bus access main_bus -> wind_speed_sensor.main_bus;
+			main_bus2compass: bus access main_bus -> compass_sensor.main_bus;
+			main_bus2gps: bus access main_bus -> gps_sensor.main_bus;
+			main_bus2depth: bus access main_bus -> depth_sensor.main_bus;
+			main_bus2gyro: bus access main_bus -> gyroscope_sensor.main_bus;
+			main_bus2rudder: bus access main_bus -> rudder.main_bus;
+			main_bus2user_interface: bus access main_bus -> user_interface.main_bus; 
+			
+		properties
+			Actual_Connection_Binding => (reference(main_bus)) applies to main_bus2cpu;
+			Actual_Connection_Binding => (reference(mem_bus)) applies to mem_bus2cpu;
+			
+			Actual_Connection_Binding => (reference(main_bus)) applies to main_bus2ais;
+			Actual_Connection_Binding => (reference(main_bus)) applies to main_bus2wind_dir;
+			Actual_Connection_Binding => (reference(main_bus)) applies to main_bus2wind_speed;
+			Actual_Connection_Binding => (reference(main_bus)) applies to main_bus2compass;
+			Actual_Connection_Binding => (reference(main_bus)) applies to main_bus2gps;
+			Actual_Connection_Binding => (reference(main_bus)) applies to main_bus2depth;
+			Actual_Connection_Binding => (reference(main_bus)) applies to main_bus2gyro;
+			Actual_Connection_Binding => (reference(main_bus)) applies to main_bus2rudder;
+			Actual_Connection_Binding => (reference(main_bus)) applies to main_bus2user_interface;
+			
+			Allowed_Processor_Binding => (reference(central_processor)) applies to ais_system_process;
+			Allowed_Processor_Binding => (reference(central_processor)) applies to wind_direction_sensor_process;
+			Allowed_Processor_Binding => (reference(central_processor)) applies to wind_speed_sensor_process;
+			Allowed_Processor_Binding => (reference(central_processor)) applies to compass_sensor_process;
+			Allowed_Processor_Binding => (reference(central_processor)) applies to gps_sensor_process;
+			Allowed_Processor_Binding => (reference(central_processor)) applies to depth_sensor_process;
+			Allowed_Processor_Binding => (reference(central_processor)) applies to gyroscope_sensor_process;
+			Allowed_Processor_Binding => (reference(central_processor)) applies to rudder_control_process;
+			Allowed_Processor_Binding => (reference(central_processor)) applies to data_to_user_interface_process;
+			Allowed_Processor_Binding => (reference(central_processor)) applies to data_from_user_interface_process;
         
     end YachtControlSystem.Impl;
-	
-	
 	
 end YachtControlSystem;

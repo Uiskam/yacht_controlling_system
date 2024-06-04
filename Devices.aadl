@@ -2,50 +2,84 @@ package Devices
 public
 	with DataTypes;
 	
+	bus MainBus	
+	end MainBus;
+	bus implementation MainBus.impl	
+	end MainBus.impl;
+	
+	bus MemoryBus	
+	end MemoryBus;
+	bus implementation MemoryBus.impl	
+	end MemoryBus.impl;
+	
 	device AISSystem
 	    features
 	        out_data: out data port DataTypes::AISUnits;
+	        main_bus: requires bus access MainBus.impl;
 	end AISSystem;
+	device implementation AISSystem.impl 
+	end AISSystem.impl;
 	
-	--Sensor components--
+
 	device WindDirectionSensor
 	    features
 	        out_data: out data port DataTypes::ApparentWindDirection;
+	        main_bus: requires bus access MainBus.impl;
 	end WindDirectionSensor;
+	device implementation WindDirectionSensor.impl 
+	end WindDirectionSensor.impl;
 	
 	device WindSpeedSensor
 	    features
 	        out_data: out data port DataTypes::ApparentWindSpeed;
+	        main_bus: requires bus access MainBus.impl;
 	end WindSpeedSensor;
+	device implementation WindSpeedSensor.impl 
+	end WindSpeedSensor.impl;
 	
 	device CompassSensor
 	    features
 	        out_data: out data port DataTypes::Compass;
+	        main_bus: requires bus access MainBus.impl;
 	end CompassSensor;
+	device implementation CompassSensor.impl 
+	end CompassSensor.impl;
 	
 	device GPSSensor
 	    features
 	        out_data: out data port DataTypes::GPSPosition;
+	        main_bus: requires bus access MainBus.impl;
 	end GPSSensor;
+	device implementation GPSSensor.impl 
+	end GPSSensor.impl;
 	
 	device DepthSensor
 	    features
 	        out_data: out data port DataTypes::Depth;
+	        main_bus: requires bus access MainBus.impl;
 	end DepthSensor;
+	device implementation DepthSensor.impl 
+	end DepthSensor.impl;
 	
 	device GyroscopeSensor
 	    features
 	        out_data: out data port DataTypes::Gyroscope;
+	        main_bus: requires bus access MainBus.impl;
 	end GyroscopeSensor;
+	device implementation GyroscopeSensor.impl 
+	end GyroscopeSensor.impl;
 	
 	device Rudder
 	    features
 	        in_control: in data port DataTypes::RudderPosition;
+	        main_bus: requires bus access MainBus.impl;
 	end Rudder;
+	device implementation Rudder.impl 
+	end Rudder.impl;
 	
 	device UserInterface
 		features
-			in_ais: out data port DataTypes::AISUnits;
+			in_ais: in data port DataTypes::AISUnits;
 			in_wind_dir: in data port DataTypes::ApparentWindDirection;
 			in_wind_speed: in data port DataTypes::ApparentWindSpeed;
 			in_compass: in data port DataTypes::Compass;
@@ -53,6 +87,9 @@ public
 			in_depth: in data port DataTypes::Depth;
 			in_gyro: in data port DataTypes::Gyroscope;
 			out_auto_navigation: out data port DataTypes::AutoNavigation;
+			main_bus: requires bus access MainBus.impl;
 	end UserInterface;
+	device implementation UserInterface.impl 
+	end UserInterface.impl;
 	
 end Devices;
