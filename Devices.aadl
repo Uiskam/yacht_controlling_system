@@ -7,10 +7,6 @@ public
 	bus implementation MainBus.impl	
 	end MainBus.impl;
 	
-	bus MemoryBus	
-	end MemoryBus;
-	bus implementation MemoryBus.impl	
-	end MemoryBus.impl;
 	
 	device AISSystem
 	    features

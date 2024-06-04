@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ASCII"?>
 <diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
-  <element uuid="53ec00d4-d3f2-431f-b5a3-fb33d24b62ae" manual="true">
-    <element uuid="96bb126c-cb77-486b-9486-83fd0ed21d2c" manual="true">
-      <element uuid="8ac3835e-f93c-4b21-a746-b54ac3b4b011" manual="true" dockArea="left">
+  <element uuid="4a4218c6-85bf-46f2-9c11-a7fa5ab0d4a0" manual="true">
+    <element uuid="abaa8098-1b06-4888-a7fb-aa1fecd56125" manual="true">
+      <element uuid="e8ce418b-440f-4203-abb9-6b858cb4f8dd" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -10,7 +10,7 @@
         </bo>
         <position y="10.0"/>
       </element>
-      <element uuid="ee70ad49-6a3a-48be-875f-4f483fdbb874" manual="true" dockArea="right">
+      <element uuid="81c42616-9e50-4681-a715-9409c257aa3a" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -23,19 +23,19 @@
         <seg>component_instance</seg>
         <seg>ais_system</seg>
       </bo>
-      <position x="646.3984794616699" y="249.0"/>
+      <position x="636.3984794616699" y="379.0"/>
       <size width="277.3736877441406" height="60.0"/>
     </element>
-    <element uuid="38d9b525-1fd3-435b-af35-713e59a9008e" manual="true">
-      <element uuid="822ccaa6-ab90-4b50-8cfd-16f830ca17f4" manual="true" dockArea="left">
+    <element uuid="02a8e9a7-d0d6-49ed-abb8-ebad8e5ad6be" manual="true">
+      <element uuid="754d0b1e-3072-4950-86f9-b4cab5d4a3c8" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
           <seg>main_bus</seg>
         </bo>
-        <position y="60.0"/>
+        <position y="110.0"/>
       </element>
-      <element uuid="55710930-cc17-4029-b1bf-023c444328b2" manual="true" dockArea="left">
+      <element uuid="f0f42c9f-12cf-4fc4-add6-83dd7f3f639b" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -43,16 +43,24 @@
         </bo>
         <position y="10.0"/>
       </element>
+      <element uuid="a63256f1-19ab-4990-809a-938baf8d5904" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>ram_bus</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>component_instance</seg>
         <seg>central_processor</seg>
       </bo>
-      <position x="563.9114990234375" y="118.0"/>
-      <size width="323.8190155029297" height="110.0"/>
+      <position x="553.9114990234375" y="118.0"/>
+      <size width="323.8190155029297" height="160.0"/>
     </element>
-    <element uuid="c4d543b4-a3a5-4632-8d91-a433c5b493fa" manual="true">
-      <element uuid="2b92765f-bb33-4e7d-bbea-866bf69b0654" manual="true" dockArea="left">
+    <element uuid="a557dff8-50b9-473a-9337-51368bcb0ac2" manual="true">
+      <element uuid="82f53ba5-02a6-4c6e-bdff-580bd1804fe4" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -60,7 +68,7 @@
         </bo>
         <position y="10.0"/>
       </element>
-      <element uuid="919edf26-3323-4438-a22d-7488bc368145" manual="true" dockArea="right">
+      <element uuid="a1b38346-25b7-4913-95d7-bc73975f0a67" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -73,11 +81,11 @@
         <seg>component_instance</seg>
         <seg>compass_sensor</seg>
       </bo>
-      <position x="628.3157958984375" y="489.0"/>
+      <position x="618.3157958984375" y="619.0"/>
       <size width="313.53905487060547" height="60.0"/>
     </element>
-    <element uuid="c49b4c6f-24e9-48d3-a5a9-edd30be3093a" manual="true">
-      <element uuid="eec49143-4122-4c04-b3fa-cb3f4bb37627" manual="true" dockArea="left">
+    <element uuid="184ecb19-21e8-4641-88c1-bf66993c84fb" manual="true">
+      <element uuid="891cf0b9-af52-4de4-a3d2-b10771cc4d13" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -90,11 +98,11 @@
         <seg>component_instance</seg>
         <seg>cpu_mem</seg>
       </bo>
-      <position x="563.9114990234375" y="38.0"/>
+      <position x="553.9114990234375" y="38.0"/>
       <size width="270.5052032470703" height="60.0"/>
     </element>
-    <element uuid="3f9f32fd-5613-4bf7-8224-9203c7d24a12" manual="true">
-      <element uuid="e67119e5-eab6-4525-8e2f-59d0e7e9bfc3" manual="true" dockArea="left">
+    <element uuid="de60ec75-5482-4a50-a487-a554cfa444f4" manual="true">
+      <element uuid="e7f11881-e319-4bde-af4c-9895750dc8b7" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -102,7 +110,7 @@
         </bo>
         <position y="10.0"/>
       </element>
-      <element uuid="63b4fedc-d869-46ba-9282-90aafd4a2a52" manual="true" dockArea="left">
+      <element uuid="b53589a5-e2f7-4152-9a78-8663ca31ad9e" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -110,7 +118,7 @@
         </bo>
         <position y="160.0"/>
       </element>
-      <element uuid="c3b4920a-1e98-478f-9c6c-d071b912a540" manual="true" dockArea="left">
+      <element uuid="90a19a79-31ce-48d0-97b0-8d880b54a73b" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -118,7 +126,7 @@
         </bo>
         <position y="210.0"/>
       </element>
-      <element uuid="ca54ab04-e521-4bfd-9200-438b5fbb8bec" manual="true" dockArea="left">
+      <element uuid="f09434c1-327e-4796-a9bc-773803702f28" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -126,7 +134,7 @@
         </bo>
         <position y="260.0"/>
       </element>
-      <element uuid="7c4dd213-31c2-4808-bc57-8a5e14c08b51" manual="true" dockArea="left">
+      <element uuid="020c6b36-08d2-44f8-b5be-a5def91b9c2c" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -134,7 +142,7 @@
         </bo>
         <position y="310.0"/>
       </element>
-      <element uuid="1db7fc3a-c439-4240-b012-897835705c15" manual="true" dockArea="left">
+      <element uuid="7c7e68be-24f4-4940-83be-e0722fbd9363" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -142,7 +150,7 @@
         </bo>
         <position y="110.0"/>
       </element>
-      <element uuid="83140632-cbea-420b-b96c-54f64f415d9f" manual="true" dockArea="left">
+      <element uuid="34fb0fcf-d3b9-420c-a850-6919547cc18f" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -155,11 +163,11 @@
         <seg>component_instance</seg>
         <seg>data_from_sensors</seg>
       </bo>
-      <position x="1036.2591552734375" y="339.0"/>
+      <position x="1026.2591552734375" y="469.0"/>
       <size width="396.4036331176758" height="360.0"/>
     </element>
-    <element uuid="a77a6c94-b7b2-46bd-bb8b-d1de47dadfda" manual="true">
-      <element uuid="590ab566-7149-444a-8f4c-d6f2a5442604" manual="true" dockArea="right">
+    <element uuid="cb54857c-6c73-491f-a925-af4845aa54a6" manual="true">
+      <element uuid="7bbef561-15ae-47a3-bc04-575b8b9096ba" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -167,7 +175,7 @@
         </bo>
         <position x="382.58725357055664" y="10.0"/>
       </element>
-      <element uuid="9879c7fe-6404-4dad-8c33-83bf8d466f02" manual="true" dockArea="right">
+      <element uuid="8ce6a60d-94e9-4714-8b9f-696e9b9819aa" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -175,7 +183,7 @@
         </bo>
         <position x="342.4049606323242" y="160.0"/>
       </element>
-      <element uuid="e81ddded-eb78-4e97-a63f-c27f8c7eee4a" manual="true" dockArea="right">
+      <element uuid="a2a06446-4635-41db-99c1-5575e5e03d2d" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -183,7 +191,7 @@
         </bo>
         <position x="362.6002731323242" y="210.0"/>
       </element>
-      <element uuid="db394a27-fce8-44d7-8077-b1ab5caff389" manual="true" dockArea="right">
+      <element uuid="056668ef-e5b6-4a35-a58c-9b38b7b7cad2" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -191,7 +199,7 @@
         </bo>
         <position x="377.5351676940918" y="260.0"/>
       </element>
-      <element uuid="b01df5a3-3f9e-44fd-b5b6-bffe44d5d724" manual="true" dockArea="right">
+      <element uuid="326bc397-2901-4151-95fe-ca3758b178b1" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -199,7 +207,7 @@
         </bo>
         <position x="371.41537857055664" y="310.0"/>
       </element>
-      <element uuid="122aeb0e-4d67-42bd-9e52-c32bf651078d" manual="true" dockArea="right">
+      <element uuid="c2086710-8609-448f-9280-e7740507c7a9" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -207,7 +215,7 @@
         </bo>
         <position x="345.5690231323242" y="110.0"/>
       </element>
-      <element uuid="9d4c0762-6f77-4588-8cfe-5fa7fab7ca24" manual="true" dockArea="right">
+      <element uuid="20eab0bc-1f78-40f8-945f-78a9e0aee031" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -220,11 +228,11 @@
         <seg>component_instance</seg>
         <seg>data_to_user_interface</seg>
       </bo>
-      <position x="12.0" y="860.0"/>
+      <position x="12.0" y="990.0"/>
       <size width="441.9114685058594" height="360.0"/>
     </element>
-    <element uuid="5ab0b2b8-31d6-4e45-b95b-06296dc2bf77" manual="true">
-      <element uuid="d8d03c8f-641e-4460-a0dd-86e85ffb5e03" manual="true" dockArea="left">
+    <element uuid="fa545b91-a6c2-45f5-a84e-cd0d64484e3b" manual="true">
+      <element uuid="586b40a4-5961-44bb-90ae-c88a5132239e" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -232,7 +240,7 @@
         </bo>
         <position y="10.0"/>
       </element>
-      <element uuid="29a73b20-beca-4224-bec0-dcfba875cde2" manual="true" dockArea="right">
+      <element uuid="51002057-6de2-4393-ba90-0e985dfbca24" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -245,11 +253,11 @@
         <seg>component_instance</seg>
         <seg>depth_sensor</seg>
       </bo>
-      <position x="638.4134521484375" y="569.0"/>
+      <position x="628.4134521484375" y="699.0"/>
       <size width="293.34374237060547" height="60.0"/>
     </element>
-    <element uuid="99fcbc17-4c03-4ba0-a1c1-dac931b60563" manual="true">
-      <element uuid="bd6e0690-236c-4a76-aeac-f7d1f67fdae3" manual="true" dockArea="left">
+    <element uuid="60e8ee7d-aea0-4289-b365-32f29ec0d81e" manual="true">
+      <element uuid="fe89f54b-0b05-4b4a-8258-e898c8bf3d00" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -257,7 +265,7 @@
         </bo>
         <position y="60.0"/>
       </element>
-      <element uuid="9891693c-f260-49b7-a501-80e8042f624e" manual="true" dockArea="left">
+      <element uuid="2e5eb5c0-ea13-44dc-b2cb-6d4fe7efc984" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -270,11 +278,11 @@
         <seg>component_instance</seg>
         <seg>engine</seg>
       </bo>
-      <position x="1540.5533447265625" y="196.0"/>
+      <position x="1530.5533447265625" y="326.0"/>
       <size width="252.1393051147461" height="110.0"/>
     </element>
-    <element uuid="6f1162e0-5120-4d8d-8258-4093fa39a422" manual="true">
-      <element uuid="dcefb3b0-0f16-47c6-b48d-d9c446afd88c" manual="true" dockArea="left">
+    <element uuid="3991819a-73ec-424a-9dbc-16a92224ef4a" manual="true">
+      <element uuid="18b1d738-8129-4603-8407-fbb182df6af3" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -282,7 +290,7 @@
         </bo>
         <position y="10.0"/>
       </element>
-      <element uuid="180592f9-e64f-45f5-a96d-d0aa570d3748" manual="true" dockArea="right">
+      <element uuid="dbae1efc-40b0-456d-85e7-6a6e8812c833" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -295,11 +303,11 @@
         <seg>component_instance</seg>
         <seg>gps_sensor</seg>
       </bo>
-      <position x="645.8809013366699" y="649.0"/>
+      <position x="635.8809013366699" y="779.0"/>
       <size width="278.4088439941406" height="60.0"/>
     </element>
-    <element uuid="0b9676a8-aa43-4ad5-a65e-40acea18e9e8" manual="true">
-      <element uuid="40da96c3-bfc9-4291-b992-b8a0f657df82" manual="true" dockArea="left">
+    <element uuid="1dc8c09e-9a31-49ff-a396-a821f701c64f" manual="true">
+      <element uuid="a40fcca2-4fb1-446d-a9f7-d8f5d6ce0750" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -307,7 +315,7 @@
         </bo>
         <position y="10.0"/>
       </element>
-      <element uuid="0a98d879-73a1-4580-ab18-b6ad7af70e68" manual="true" dockArea="right">
+      <element uuid="e9ff6cd5-1d67-451f-8c57-0102092c36e3" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -320,19 +328,19 @@
         <seg>component_instance</seg>
         <seg>gyroscope_sensor</seg>
       </bo>
-      <position x="623.2702217102051" y="729.0"/>
+      <position x="613.2702217102051" y="859.0"/>
       <size width="323.6302032470703" height="60.0"/>
     </element>
-    <element uuid="11217242-615e-4e29-90f3-c518c0bb975a" manual="true">
+    <element uuid="6e522525-fe4a-4370-ba2d-c2c1ce2ce342" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>component_instance</seg>
         <seg>main_bus</seg>
       </bo>
-      <position x="338.07032775878906" y="200.0"/>
+      <position x="338.07032775878906" y="348.0"/>
       <size width="115.84114074707031" height="120.0"/>
     </element>
-    <element uuid="b9b415ed-a615-4ed9-b01c-83585b61f8c9" manual="true">
+    <element uuid="934e1f51-6609-41f1-97cd-9eaebd341b69" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>component_instance</seg>
@@ -341,8 +349,8 @@
       <position x="337.2044372558594" y="68.33333333333334"/>
       <size width="116.70703125" height="35.0"/>
     </element>
-    <element uuid="161b5a1b-adab-41ed-a712-3fc0e78ab6a9" manual="true">
-      <element uuid="5b63a13e-b42b-40b1-a461-9256842defde" manual="true" dockArea="left">
+    <element uuid="811a2268-6c26-4caa-95d3-d5e07fcd7186" manual="true">
+      <element uuid="1505a66d-85a7-415a-a5b0-7d899ba84d6f" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -350,7 +358,7 @@
         </bo>
         <position y="10.0"/>
       </element>
-      <element uuid="ba23a20d-7a23-4001-a0c8-8713bd112ce4" manual="true" dockArea="right">
+      <element uuid="43fad934-5a12-454d-8d65-e8bb107cff4a" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -363,11 +371,37 @@
         <seg>component_instance</seg>
         <seg>nav_process</seg>
       </bo>
-      <position x="1036.2591552734375" y="1060.0"/>
+      <position x="1026.2591552734375" y="1190.0"/>
       <size width="474.2942428588867" height="60.0"/>
     </element>
-    <element uuid="9e75c412-ff9e-4a32-b4a7-860358359ed8" manual="true">
-      <element uuid="713d2745-b443-4aed-b455-a0dd612579b9" manual="true" dockArea="left">
+    <element uuid="40685831-3470-4916-9c61-1a058e82893a" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>ram_bus</seg>
+      </bo>
+      <position x="344.7434997558594" y="198.33333333333334"/>
+      <size width="109.16796875" height="35.0"/>
+    </element>
+    <element uuid="c6e34823-5a77-4a6e-99f0-28f0ee918811" manual="true">
+      <element uuid="23ef2a07-ea75-4fca-a126-42179456aaee" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>ram_bus</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>ram_mem</seg>
+      </bo>
+      <position x="553.9114990234375" y="298.0"/>
+      <size width="257.8229217529297" height="60.0"/>
+    </element>
+    <element uuid="a4657e4a-572e-4327-ac64-551366a18f89" manual="true">
+      <element uuid="fdf64aff-d102-4c4e-b809-dac80428411c" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -375,7 +409,7 @@
         </bo>
         <position y="60.0"/>
       </element>
-      <element uuid="b3b5bd06-9978-4b47-8ce2-86963c9b984a" manual="true" dockArea="left">
+      <element uuid="24ec6ae6-5899-4485-9098-92f07d785e0b" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -388,11 +422,11 @@
         <seg>component_instance</seg>
         <seg>rudder</seg>
       </bo>
-      <position x="1540.5533447265625" y="757.0"/>
+      <position x="1530.5533447265625" y="887.0"/>
       <size width="251.20831680297852" height="110.0"/>
     </element>
-    <element uuid="44a66742-2d8d-4823-8743-7dbe4f7832a7" manual="true">
-      <element uuid="f25a3911-f3a6-41a6-a205-114074e561a1" manual="true" dockArea="left">
+    <element uuid="f4fc4ee6-1caa-4e3d-85a2-e0d6225b8c8a" manual="true">
+      <element uuid="6aa2230f-6e18-4ab7-9f5b-648d04255121" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -400,7 +434,7 @@
         </bo>
         <position y="10.0"/>
       </element>
-      <element uuid="3211a869-48ec-4bf5-a85e-ecb2afb42392" manual="true" dockArea="right">
+      <element uuid="16a1a3ea-f59d-4b07-be6d-44a8ee4aad63" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -413,11 +447,11 @@
         <seg>component_instance</seg>
         <seg>throttle_process</seg>
       </bo>
-      <position x="1059.787784576416" y="910.0"/>
+      <position x="1049.787784576416" y="1040.0"/>
       <size width="427.2369842529297" height="60.0"/>
     </element>
-    <element uuid="e858f672-55c8-4ad5-9876-27298c8ce355" manual="true">
-      <element uuid="76b6f262-b354-49b3-b09e-09882f53aa20" manual="true" dockArea="left">
+    <element uuid="1dded770-039c-4324-97c5-e32835583720" manual="true">
+      <element uuid="9ea79999-3159-4321-a79e-20e198af0837" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -425,7 +459,7 @@
         </bo>
         <position y="60.0"/>
       </element>
-      <element uuid="d855064a-d74a-4262-af35-7f285ec6671e" manual="true" dockArea="left">
+      <element uuid="01df11dd-8b86-4166-8e35-79842ce974bd" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -433,7 +467,7 @@
         </bo>
         <position y="210.0"/>
       </element>
-      <element uuid="22fcbd47-c036-4341-92f9-cf06c41f65d2" manual="true" dockArea="left">
+      <element uuid="e1110171-44a6-4f99-8cd3-a3c942635864" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -441,7 +475,7 @@
         </bo>
         <position y="260.0"/>
       </element>
-      <element uuid="8d36970c-03e6-4e52-9dde-0b8d1bb83801" manual="true" dockArea="left">
+      <element uuid="227d95f5-dda4-4945-a608-e1a5f91f8c91" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -449,7 +483,7 @@
         </bo>
         <position y="310.0"/>
       </element>
-      <element uuid="00f0d209-68af-45e1-af42-b742fdb6ae62" manual="true" dockArea="left">
+      <element uuid="caf9b69e-29ce-4008-a82a-ceb1a89cc3da" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -457,7 +491,7 @@
         </bo>
         <position y="360.0"/>
       </element>
-      <element uuid="1f687b61-78d1-4c7f-88d2-29779c4b164b" manual="true" dockArea="left">
+      <element uuid="719a7b48-b678-494e-ab3a-dfb5d441930b" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -465,7 +499,7 @@
         </bo>
         <position y="160.0"/>
       </element>
-      <element uuid="705c3e65-06aa-47bb-a0e5-97bc2039d9f2" manual="true" dockArea="left">
+      <element uuid="439574df-3ea3-435c-94db-698e9e3ce4c1" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -473,7 +507,7 @@
         </bo>
         <position y="110.0"/>
       </element>
-      <element uuid="ffe60f9c-9fee-44ea-9d9e-e2c84d531b97" manual="true" dockArea="left">
+      <element uuid="9ab521fa-752b-40db-8f27-7554cfcddee8" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -481,7 +515,7 @@
         </bo>
         <position y="10.0"/>
       </element>
-      <element uuid="1b1afc29-82fa-4715-be5c-450878e5b018" manual="true" dockArea="right">
+      <element uuid="e573fb38-9fe7-45bc-8bf8-064789f06265" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -489,7 +523,7 @@
         </bo>
         <position x="294.78124237060547" y="260.0"/>
       </element>
-      <element uuid="4113f850-9c71-47f0-b5c2-b17a8c4eca06" manual="true" dockArea="right">
+      <element uuid="5db1605b-3df3-4e91-a625-4077a1689a3c" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -502,11 +536,11 @@
         <seg>component_instance</seg>
         <seg>user_interface</seg>
       </bo>
-      <position x="563.9114990234375" y="810.0"/>
+      <position x="553.9114990234375" y="940.0"/>
       <size width="442.34764862060547" height="410.0"/>
     </element>
-    <element uuid="e3cd8e89-068d-404c-87c5-152252a24cb0" manual="true">
-      <element uuid="13f21b45-b419-4b00-b94c-bf1aac022205" manual="true" dockArea="left">
+    <element uuid="302e2fe8-f861-44e0-ab10-3322ab9f0bd6" manual="true">
+      <element uuid="47f6da9e-55e6-45ae-9ff5-828290d2aa4f" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -514,7 +548,7 @@
         </bo>
         <position y="10.0"/>
       </element>
-      <element uuid="e5a4d0e8-09e6-4908-928d-857adcfa8096" manual="true" dockArea="right">
+      <element uuid="f3c8bf9e-726e-44b9-9a71-f070140404a9" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -527,11 +561,11 @@
         <seg>component_instance</seg>
         <seg>wind_direction_sensor</seg>
       </bo>
-      <position x="609.3607215881348" y="409.0"/>
+      <position x="599.3607215881348" y="539.0"/>
       <size width="351.44920349121094" height="60.0"/>
     </element>
-    <element uuid="6bd01f0e-6008-48e1-9e01-534cb7d2c178" manual="true">
-      <element uuid="61d594c2-74f5-4a30-957c-45ab22713584" manual="true" dockArea="left">
+    <element uuid="f70acab7-2877-4e81-977f-29fd3b4c2c22" manual="true">
+      <element uuid="925eaf4b-ad2a-4832-a846-fd73ba558872" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -539,7 +573,7 @@
         </bo>
         <position y="10.0"/>
       </element>
-      <element uuid="c8e6daff-c229-4be3-b5a8-6948fd99727d" manual="true" dockArea="right">
+      <element uuid="9f7d459e-df58-4926-8c44-09918418503e" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -552,313 +586,335 @@
         <seg>component_instance</seg>
         <seg>wind_speed_sensor</seg>
       </bo>
-      <position x="618.5827217102051" y="329.0"/>
+      <position x="608.5827217102051" y="459.0"/>
       <size width="333.0052032470703" height="60.0"/>
     </element>
-    <element uuid="8c782b56-c330-4777-aec0-00d93b9dfde9" manual="true">
+    <element uuid="77e77a42-be55-4402-a904-b55bfe274c0b" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>ais2proc : YachtControlSystem_Impl_Instance.ais_system.out_data -> YachtControlSystem_Impl_Instance.data_from_sensors.in_ais</seg>
       </bo>
       <bendpoints>
-        <point x="1046.2591552734375" y="41.0"/>
-        <point x="1046.2591552734375" y="131.0"/>
+        <point x="1016.2591552734375" y="421.0"/>
+        <point x="1016.2591552734375" y="511.0"/>
       </bendpoints>
     </element>
-    <element uuid="5f46c100-0543-4611-bd7f-79e39e043426" manual="true">
+    <element uuid="126bb0cf-3775-4747-9546-357b59c8d8b3" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>ais2user : YachtControlSystem_Impl_Instance.data_to_user_interface.out_ais -> YachtControlSystem_Impl_Instance.user_interface.in_ais</seg>
       </bo>
     </element>
-    <element uuid="c8864c99-b275-4177-a102-eee01480b34b" manual="true">
+    <element uuid="81acbb4d-1925-4dab-9bca-3579f0120d58" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>auto_nav : YachtControlSystem_Impl_Instance.user_interface.out_auto_navigation -> YachtControlSystem_Impl_Instance.nav_process.in_auto_navigation</seg>
       </bo>
     </element>
-    <element uuid="ea534506-be31-4dcc-83a8-5ef1744d4a19" manual="true">
+    <element uuid="e2264461-b805-4141-8ebc-e418f38f7f50" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>auto_throttle : YachtControlSystem_Impl_Instance.user_interface.out_throttle_control -> YachtControlSystem_Impl_Instance.throttle_process.in_throttle_control</seg>
       </bo>
     </element>
-    <element uuid="9025c579-7412-48a1-8f01-1922d6531b04" manual="true">
+    <element uuid="10e97ee9-bdf9-478f-ad05-4fc5461439fa" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>comapss2user : YachtControlSystem_Impl_Instance.data_to_user_interface.out_compass -> YachtControlSystem_Impl_Instance.user_interface.in_compass</seg>
       </bo>
     </element>
-    <element uuid="2cab348d-5371-4c05-a834-d18644c019a5" manual="true">
+    <element uuid="b9b94e56-896d-4128-899d-f636c7e54c99" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>compass2proc : YachtControlSystem_Impl_Instance.compass_sensor.out_data -> YachtControlSystem_Impl_Instance.data_from_sensors.in_compass</seg>
       </bo>
     </element>
-    <element uuid="6e18d7b3-0d27-4018-8b87-e117a018edec" manual="true">
+    <element uuid="1c7d4f68-f1ab-45a6-8087-ce82e360ce14" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>depth2proc : YachtControlSystem_Impl_Instance.depth_sensor.out_data -> YachtControlSystem_Impl_Instance.data_from_sensors.in_depth</seg>
       </bo>
       <bendpoints>
-        <point x="1036.2591552734375" y="361.0"/>
-        <point x="1036.2591552734375" y="331.0"/>
+        <point x="1006.2591552734375" y="741.0"/>
+        <point x="1006.2591552734375" y="711.0"/>
       </bendpoints>
     </element>
-    <element uuid="1042a7f3-3efb-4cda-8c18-9ede87fcf650" manual="true">
+    <element uuid="afa6f2f5-00e3-4520-9c2a-078e892b7562" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>depth2user : YachtControlSystem_Impl_Instance.data_to_user_interface.out_depth -> YachtControlSystem_Impl_Instance.user_interface.in_depth</seg>
       </bo>
     </element>
-    <element uuid="0412e58e-3120-4aec-9cf7-1619510b0bf0" manual="true">
+    <element uuid="41f5a233-30be-4237-97cd-a04cd3ebce1a" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>engine2proc : YachtControlSystem_Impl_Instance.throttle_process.out_throttle_value -> YachtControlSystem_Impl_Instance.engine.in_control</seg>
       </bo>
       <bendpoints>
-        <point x="1540.5533447265625" y="702.0"/>
-        <point x="1540.5533447265625" y="38.0"/>
+        <point x="1510.5533447265625" y="1082.0"/>
+        <point x="1510.5533447265625" y="418.0"/>
       </bendpoints>
     </element>
-    <element uuid="47141223-849e-4d55-b211-fab50750738c" manual="true">
+    <element uuid="7d4caf09-99e2-4299-a84f-936da6a51abc" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>gps2proc : YachtControlSystem_Impl_Instance.gps_sensor.out_data -> YachtControlSystem_Impl_Instance.data_from_sensors.in_gps</seg>
       </bo>
       <bendpoints>
-        <point x="1036.2591552734375" y="441.0"/>
-        <point x="1036.2591552734375" y="381.0"/>
+        <point x="1006.2591552734375" y="821.0"/>
+        <point x="1006.2591552734375" y="761.0"/>
       </bendpoints>
     </element>
-    <element uuid="6eb8e4f1-5901-493f-9be1-3a7ea1a2d219" manual="true">
+    <element uuid="f7acd692-f738-4ac0-a043-292ba4b129f2" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>gps2user : YachtControlSystem_Impl_Instance.data_to_user_interface.out_gps -> YachtControlSystem_Impl_Instance.user_interface.in_gps</seg>
       </bo>
     </element>
-    <element uuid="51cf2032-0a4d-4dd2-bcc3-b4c1bfaf8f87" manual="true">
+    <element uuid="1fab92cd-44d4-47c5-b3ed-345eaa6216ba" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>gyro2proc : YachtControlSystem_Impl_Instance.gyroscope_sensor.out_data -> YachtControlSystem_Impl_Instance.data_from_sensors.in_gyro</seg>
       </bo>
       <bendpoints>
-        <point x="1046.2591552734375" y="521.0"/>
-        <point x="1046.2591552734375" y="431.0"/>
+        <point x="1016.2591552734375" y="901.0"/>
+        <point x="1016.2591552734375" y="811.0"/>
       </bendpoints>
     </element>
-    <element uuid="8316a046-5e86-4067-bd3a-a3c041b51e24" manual="true">
+    <element uuid="c6356415-af64-4879-bd6f-7cf879956f6d" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>gyro2user : YachtControlSystem_Impl_Instance.data_to_user_interface.out_gyro -> YachtControlSystem_Impl_Instance.user_interface.in_gyro</seg>
       </bo>
     </element>
-    <element uuid="b4598277-3bc2-4eb2-8ae5-1fb1930c1581" manual="true">
+    <element uuid="3a51edf9-8bf4-4dbb-a9d4-919abd8511d3" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>main_bus2ais : YachtControlSystem_Impl_Instance.main_bus -> YachtControlSystem_Impl_Instance.ais_system.main_bus</seg>
       </bo>
       <bendpoints>
-        <point x="477.9114990234375" y="-20.0"/>
-        <point x="563.9114990234375" y="-20.0"/>
-        <point x="563.9114990234375" y="41.0"/>
+        <point x="457.9114685058594" y="378.0"/>
+        <point x="543.9114990234375" y="378.0"/>
+        <point x="543.9114990234375" y="421.0"/>
       </bendpoints>
     </element>
-    <element uuid="95fe093e-39fd-4755-a493-a35f9d0a4f22" manual="true">
+    <element uuid="ee51c143-5598-4538-bb04-59d8148cab5a" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>main_bus2compass : YachtControlSystem_Impl_Instance.main_bus -> YachtControlSystem_Impl_Instance.compass_sensor.main_bus</seg>
       </bo>
       <bendpoints>
-        <point x="477.9114990234375" y="9.999984741210938"/>
-        <point x="533.9114990234375" y="9.999984741210938"/>
-        <point x="533.9114990234375" y="281.0"/>
+        <point x="457.9114685058594" y="408.0"/>
+        <point x="513.9114990234375" y="408.0"/>
+        <point x="513.9114990234375" y="661.0"/>
       </bendpoints>
     </element>
-    <element uuid="20d8fa79-2dfe-4894-8931-7fe20067d7a3" manual="true">
+    <element uuid="9a12387e-4239-4b2a-b748-ec3de6ad8742" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>main_bus2cpu : YachtControlSystem_Impl_Instance.main_bus -> YachtControlSystem_Impl_Instance.central_processor.main_bus</seg>
       </bo>
       <bendpoints>
-        <point x="473.9114990234375" y="-40.0"/>
+        <point x="457.9114685058594" y="358.0"/>
+        <point x="463.9114685058594" y="358.0"/>
+        <point x="463.9114685058594" y="260.0"/>
       </bendpoints>
     </element>
-    <element uuid="baa927c1-c3e8-4a77-a861-7c3d55d63e38" manual="true">
+    <element uuid="d00398c2-6f27-4758-af7e-70d6eb8fda36" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>main_bus2depth : YachtControlSystem_Impl_Instance.main_bus -> YachtControlSystem_Impl_Instance.depth_sensor.main_bus</seg>
       </bo>
       <bendpoints>
-        <point x="477.9114990234375" y="19.999984741210938"/>
-        <point x="523.9114990234375" y="19.999984741210938"/>
-        <point x="523.9114990234375" y="361.0"/>
+        <point x="457.9114685058594" y="418.0"/>
+        <point x="503.9114685058594" y="418.0"/>
+        <point x="503.9114685058594" y="741.0"/>
       </bendpoints>
     </element>
-    <element uuid="529c2c08-54e1-4e75-af63-a8fde3248bcf" manual="true">
+    <element uuid="8f1189f6-0706-44c4-94e8-7fb95e69d9e2" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>main_bus2engine : YachtControlSystem_Impl_Instance.main_bus -> YachtControlSystem_Impl_Instance.engine.main_bus</seg>
       </bo>
       <bendpoints>
-        <point x="477.9114990234375" y="-30.0"/>
-        <point x="573.9114990234375" y="-30.0"/>
-        <point x="573.9114990234375" y="-12.0"/>
+        <point x="453.9114685058594" y="368.0"/>
       </bendpoints>
     </element>
-    <element uuid="92563ad9-3cf4-4b22-b4b8-659a3f869070" manual="true">
+    <element uuid="094f9aad-e613-4613-a1d8-40079a962109" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>main_bus2gps : YachtControlSystem_Impl_Instance.main_bus -> YachtControlSystem_Impl_Instance.gps_sensor.main_bus</seg>
       </bo>
       <bendpoints>
-        <point x="477.9114990234375" y="29.999984741210938"/>
-        <point x="513.9114990234375" y="29.999984741210938"/>
-        <point x="513.9114990234375" y="441.0"/>
+        <point x="457.9114685058594" y="428.0"/>
+        <point x="493.9114685058594" y="428.0"/>
+        <point x="493.9114685058594" y="821.0"/>
       </bendpoints>
     </element>
-    <element uuid="d4d82eb0-d8e6-482b-8959-2c4495712c75" manual="true">
+    <element uuid="d22712da-b555-4eee-8604-48c8e0925da1" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>main_bus2gyro : YachtControlSystem_Impl_Instance.main_bus -> YachtControlSystem_Impl_Instance.gyroscope_sensor.main_bus</seg>
       </bo>
       <bendpoints>
-        <point x="477.9114990234375" y="40.0"/>
-        <point x="503.9114990234375" y="40.0"/>
-        <point x="503.9114990234375" y="521.0"/>
+        <point x="457.9114685058594" y="438.0"/>
+        <point x="483.9114685058594" y="438.0"/>
+        <point x="483.9114685058594" y="901.0"/>
       </bendpoints>
     </element>
-    <element uuid="6ef511ee-7126-42d1-a104-0ca0968a7838" manual="true">
+    <element uuid="00e26f7a-d4ca-406b-88cf-775d0eeba5a1" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>main_bus2rudder : YachtControlSystem_Impl_Instance.main_bus -> YachtControlSystem_Impl_Instance.rudder.main_bus</seg>
       </bo>
       <bendpoints>
-        <point x="477.9114990234375" y="49.99998474121094"/>
-        <point x="493.9114990234375" y="49.99998474121094"/>
-        <point x="493.9114990234375" y="549.0"/>
+        <point x="457.9114685058594" y="448.0"/>
+        <point x="473.9114685058594" y="448.0"/>
+        <point x="473.9114685058594" y="929.0"/>
       </bendpoints>
     </element>
-    <element uuid="85938e32-ae97-4ce9-af88-ec5046944b5d" manual="true">
+    <element uuid="c6e342bc-67f9-4e48-a5c5-10a56bb0ece8" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>main_bus2user_interface : YachtControlSystem_Impl_Instance.main_bus -> YachtControlSystem_Impl_Instance.user_interface.main_bus</seg>
       </bo>
       <bendpoints>
-        <point x="477.9114990234375" y="59.99998474121094"/>
-        <point x="483.9114990234375" y="59.99998474121094"/>
-        <point x="483.9114990234375" y="602.0"/>
+        <point x="457.9114685058594" y="458.0"/>
+        <point x="463.9114685058594" y="458.0"/>
+        <point x="463.9114685058594" y="982.0"/>
       </bendpoints>
     </element>
-    <element uuid="d35d8fb8-6d13-4e88-b85d-70c3c0f628ea" manual="true">
+    <element uuid="183cc40e-bf52-421a-a62f-881ecc33b75e" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>main_bus2wind_dir : YachtControlSystem_Impl_Instance.main_bus -> YachtControlSystem_Impl_Instance.wind_direction_sensor.main_bus</seg>
       </bo>
       <bendpoints>
-        <point x="477.9114990234375"/>
-        <point x="543.9114990234375"/>
-        <point x="543.9114990234375" y="201.0"/>
+        <point x="457.9114685058594" y="398.0"/>
+        <point x="523.9114990234375" y="398.0"/>
+        <point x="523.9114990234375" y="581.0"/>
       </bendpoints>
     </element>
-    <element uuid="1239871f-50ca-40eb-9048-87bb736aac05" manual="true">
+    <element uuid="1661b898-f99a-4ed2-ae62-14cbf6e5c5c7" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>main_bus2wind_speed : YachtControlSystem_Impl_Instance.main_bus -> YachtControlSystem_Impl_Instance.wind_speed_sensor.main_bus</seg>
       </bo>
       <bendpoints>
-        <point x="477.9114990234375" y="-10.0"/>
-        <point x="553.9114990234375" y="-10.0"/>
-        <point x="553.9114990234375" y="121.0"/>
+        <point x="457.9114685058594" y="388.0"/>
+        <point x="533.9114990234375" y="388.0"/>
+        <point x="533.9114990234375" y="501.0"/>
       </bendpoints>
     </element>
-    <element uuid="c51e06fe-e24c-4857-87d0-ae3c7d673e84" manual="true">
+    <element uuid="1a88a60d-1f2a-48d4-a38f-929657981ed4" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>mem_bus2cpu : YachtControlSystem_Impl_Instance.mem_bus -> YachtControlSystem_Impl_Instance.central_processor.mem_bus</seg>
       </bo>
       <bendpoints>
-        <point x="477.9114990234375" y="-158.33334350585938"/>
-        <point x="483.9114990234375" y="-158.33334350585938"/>
-        <point x="483.9114990234375" y="-90.0"/>
+        <point x="457.9114685058594" y="91.66666412353516"/>
+        <point x="463.9114685058594" y="91.66666412353516"/>
+        <point x="463.9114685058594" y="160.0"/>
       </bendpoints>
     </element>
-    <element uuid="c347ccf4-4fb8-4f52-9ad1-f98d7d54bad3" manual="true">
+    <element uuid="1f3e9643-0179-4b48-b37c-5b092cdf7f9d" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>mem_bus2mem : YachtControlSystem_Impl_Instance.mem_bus -> YachtControlSystem_Impl_Instance.cpu_mem.mem_bus</seg>
       </bo>
       <bendpoints>
-        <point x="473.9114990234375" y="-170.0"/>
+        <point x="453.9114685058594" y="80.0"/>
       </bendpoints>
     </element>
-    <element uuid="f05c6126-f3d2-4502-9be0-8775f930929f" manual="true">
+    <element uuid="781627e0-19a5-4e79-bbb0-0dbbc9fa4117" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>ram_bus2cpu : YachtControlSystem_Impl_Instance.ram_bus -> YachtControlSystem_Impl_Instance.central_processor.ram_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="453.9114685058594" y="210.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="0a74a115-7819-40f3-a2fb-6463587bfb62" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>ram_bus2mem : YachtControlSystem_Impl_Instance.ram_bus -> YachtControlSystem_Impl_Instance.ram_mem.ram_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="457.9114685058594" y="221.6666717529297"/>
+        <point x="473.9114685058594" y="221.6666717529297"/>
+        <point x="473.9114685058594" y="340.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="b7b042be-2b5e-4db7-b6c7-28c796e83ce4" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>rudder2proc : YachtControlSystem_Impl_Instance.nav_process.out_rudder_instructions -> YachtControlSystem_Impl_Instance.rudder.in_control</seg>
       </bo>
       <bendpoints>
-        <point x="1550.5533447265625" y="852.0"/>
-        <point x="1550.5533447265625" y="599.0"/>
+        <point x="1520.5533447265625" y="1232.0"/>
+        <point x="1520.5533447265625" y="979.0"/>
       </bendpoints>
     </element>
-    <element uuid="a0521e6d-2da9-4705-b638-c20a5dc2d3d1" manual="true">
+    <element uuid="24d99ce1-6a62-401b-8d5f-b796a8b0ec08" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>wind_dir2proc : YachtControlSystem_Impl_Instance.wind_direction_sensor.out_data -> YachtControlSystem_Impl_Instance.data_from_sensors.in_wind_dir</seg>
       </bo>
       <bendpoints>
-        <point x="1036.2591552734375" y="201.0"/>
-        <point x="1036.2591552734375" y="231.0"/>
+        <point x="1006.2591552734375" y="581.0"/>
+        <point x="1006.2591552734375" y="611.0"/>
       </bendpoints>
     </element>
-    <element uuid="aa81ad95-d1f6-49de-9a72-a10f8380fc1c" manual="true">
+    <element uuid="7aca9198-3350-498b-9e27-d07e50a3c828" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>wind_dir2user : YachtControlSystem_Impl_Instance.data_to_user_interface.out_wind_dir -> YachtControlSystem_Impl_Instance.user_interface.in_wind_dir</seg>
       </bo>
     </element>
-    <element uuid="eae2d116-6173-445a-8eca-e52c5b8629bc" manual="true">
+    <element uuid="9051efb5-37bd-456f-be72-8a49faa76e05" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>wind_speed2proc : YachtControlSystem_Impl_Instance.wind_speed_sensor.out_data -> YachtControlSystem_Impl_Instance.data_from_sensors.in_wind_speed</seg>
       </bo>
       <bendpoints>
-        <point x="1036.2591552734375" y="121.0"/>
-        <point x="1036.2591552734375" y="181.0"/>
+        <point x="1006.2591552734375" y="501.0"/>
+        <point x="1006.2591552734375" y="561.0"/>
       </bendpoints>
     </element>
-    <element uuid="f38a159d-f417-4251-922c-819e778561b9" manual="true">
+    <element uuid="44c6f98f-a0e6-4335-b809-96bc5923b074" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
@@ -870,8 +926,8 @@
       <seg>system_instance</seg>
       <seg>/yacht-controll-system/instances/yachtcontrolsystem_yachtcontrolsystem_impl_instance.aaxl2</seg>
     </bo>
-    <position x="20.0" y="-250.0"/>
-    <size width="1804.692626953125" height="1232.0"/>
+    <position/>
+    <size width="1794.692626953125" height="1362.0"/>
   </element>
   <config type="structure" connectionPrimaryLabelsVisible="false">
     <enabledAadlProperties/>

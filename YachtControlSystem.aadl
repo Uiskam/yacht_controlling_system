@@ -6,10 +6,27 @@ public
 	system YachtControlSystem
 	end YachtControlSystem;
 	
+	bus MemoryBus	
+	end MemoryBus;
+	bus implementation MemoryBus.impl	
+	end MemoryBus.impl;
+	
+	bus RAMBus	
+	end RAMBus;
+	bus implementation RAMBus.impl	
+	end RAMBus.impl;
+	
+	memory CentralCPURAM
+	features
+		ram_bus: requires bus access RAMBus.impl;
+	end CentralCPURAM;
+
+	memory implementation CentralCPURAM.impl
+	end CentralCPURAM.impl;
 	
 	memory CentralCPUMemory
 	features
-		mem_bus: requires bus access Devices::MemoryBus.impl;
+		mem_bus: requires bus access MemoryBus.impl;
 	end CentralCPUMemory;
 
 	memory implementation CentralCPUMemory.impl
@@ -18,7 +35,8 @@ public
 	processor CentralProcessor
 		features
 			main_bus: requires bus access Devices::MainBus.impl;
-			mem_bus: requires bus access Devices::MemoryBus.impl;
+			mem_bus: requires bus access MemoryBus.impl;
+			ram_bus: requires bus access RAMBus.impl;
 	end CentralProcessor;
 	
 	processor implementation CentralProcessor.impl
@@ -28,8 +46,10 @@ public
 	    subcomponents
 	        central_processor: processor CentralProcessor.impl;
 	        cpu_mem: memory CentralCPUMemory.impl; 
+	        ram_mem: memory CentralCPURAM.impl;
 	        main_bus: bus Devices::MainBus.impl;
-	        mem_bus: bus Devices::MemoryBus.impl;
+	        mem_bus: bus MemoryBus.impl;
+	        ram_bus: bus RAMBus.impl;
 	        
 	        ais_system: device Devices::AISSystem.impl;
 	        wind_direction_sensor: device Devices::WindDirectionSensor.impl;
@@ -52,6 +72,9 @@ public
 			main_bus2cpu: bus access main_bus -> central_processor.main_bus;
 			mem_bus2cpu: bus access mem_bus -> central_processor.mem_bus;
 			mem_bus2mem: bus access mem_bus -> cpu_mem.mem_bus;
+			ram_bus2cpu: bus access ram_bus -> central_processor.ram_bus;
+			ram_bus2mem: bus access ram_bus -> ram_mem.ram_bus;
+			
 			
 			main_bus2ais: bus access main_bus -> ais_system.main_bus;
 			main_bus2wind_dir: bus access main_bus -> wind_direction_sensor.main_bus;
@@ -91,6 +114,8 @@ public
 			Actual_Connection_Binding => (reference(main_bus)) applies to main_bus2cpu;
 			Actual_Connection_Binding => (reference(mem_bus)) applies to mem_bus2cpu;
 			Actual_Connection_Binding => (reference(mem_bus)) applies to mem_bus2mem;
+			Actual_Connection_Binding => (reference(ram_bus)) applies to ram_bus2cpu;
+			Actual_Connection_Binding => (reference(ram_bus)) applies to ram_bus2mem;
 			
 			Actual_Processor_Binding => (reference(central_processor)) applies to data_from_sensors;
 			Actual_Processor_Binding => (reference(central_processor)) applies to data_to_user_interface;
