@@ -43,4 +43,16 @@ public
 	        in_control: in data port DataTypes::RudderPosition;
 	end Rudder;
 	
+	device UserInterface
+		features
+			in_ais: out data port DataTypes::AISUnits;
+			in_wind_dir: in data port DataTypes::ApparentWindDirection;
+			in_wind_speed: in data port DataTypes::ApparentWindSpeed;
+			in_compass: in data port DataTypes::Compass;
+			in_gps: in data port DataTypes::GPSPosition;
+			in_depth: in data port DataTypes::Depth;
+			in_gyro: in data port DataTypes::Gyroscope;
+			out_auto_navigation: out data port DataTypes::AutoNavigation;
+	end UserInterface;
+	
 end Devices;
