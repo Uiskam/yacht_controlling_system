@@ -138,4 +138,25 @@ public
 		subcomponents
 			prod: thread RudderControlThread;
 	end RudderControlProcess.impl;
+	
+	
+	thread DataToUserInterfaceThread
+		features
+			out_ais: out data port DataTypes::AISUnits;
+			out_wind_dir: out data port DataTypes::ApparentWindDirection;
+			out_wind_speed: out data port DataTypes::ApparentWindSpeed;
+			out_compass: out data port DataTypes::Compass;
+			out_gps: out data port DataTypes::GPSPosition;
+			out_depth: out data port DataTypes::Depth;
+			out_gyro: out data port DataTypes::Gyroscope;
+	end DataToUserInterfaceThread;
+	
+	process DataToUserInterfaceProcess
+	end DataToUserInterfaceProcess;
+	
+	process implementation DataToUserInterfaceProcess.impl
+		subcomponents
+			out_data: thread DataToUserInterfaceThread;
+	end DataToUserInterfaceProcess.impl;
+
 end Processes;
