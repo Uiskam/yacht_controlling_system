@@ -4,143 +4,20 @@ public
 	with Base_Types;
 	with DataTypes;
 	
-	thread AISSystemThread
+	process DataFromSensorsProcess
 		features
-			in_data: in data port DataTypes::AISUnits;
-		properties
-			Dispatch_Protocol => Periodic;
-			Period => 500 ms;
-	end AISSystemThread;
+			in_ais: in data port DataTypes::AISUnits;
+			in_wind_dir: in data port DataTypes::ApparentWindDirection;
+			in_wind_speed: in data port DataTypes::ApparentWindSpeed;
+			in_compass: in data port DataTypes::Compass;
+			in_gps: in data port DataTypes::GPSPosition;
+			in_depth: in data port DataTypes::Depth;
+			in_gyro: in data port DataTypes::Gyroscope;
+	end DataFromSensorsProcess;
+	process implementation DataFromSensorsProcess.impl
+	end DataFromSensorsProcess.impl;
 	
-	process AISSystemProcess
-	end AISSystemProcess;
-	
-	process implementation AISSystemProcess.impl
-		subcomponents
-			prod: thread AISSystemThread;
-	end AISSystemProcess.impl;
-	
-	
-	thread WindDirectionSensorThread
-		features
-			in_data: in data port DataTypes::ApparentWindDirection;
-		properties
-			Dispatch_Protocol => Periodic;
-			Period => 500 ms;
-	end WindDirectionSensorThread;
-	
-	process WindDirectionSensorProcess
-	end WindDirectionSensorProcess;
-	
-	process implementation WindDirectionSensorProcess.impl
-		subcomponents
-			prod: thread WindDirectionSensorThread;
-	end WindDirectionSensorProcess.impl;
-	
-
-	thread WindSpeedSensorThread
-		features
-			in_data: in data port DataTypes::ApparentWindSpeed;
-		properties
-			Dispatch_Protocol => Periodic;
-			Period => 500 ms;
-	end WindSpeedSensorThread;
-	
-	process WindSpeedSensorProcess
-	end WindSpeedSensorProcess;
-	
-	process implementation WindSpeedSensorProcess.impl
-		subcomponents
-			prod: thread WindSpeedSensorThread;
-	end WindSpeedSensorProcess.impl;
-	
-
-	thread CompassSensorThread
-		features
-			in_data: in data port DataTypes::Compass;
-		properties
-			Dispatch_Protocol => Periodic;
-			Period => 500 ms;
-	end CompassSensorThread;
-	
-	process CompassSensorProcess
-	end CompassSensorProcess;
-	
-	process implementation CompassSensorProcess.impl
-		subcomponents
-			prod: thread CompassSensorThread;
-	end CompassSensorProcess.impl;
-	
-	
-	thread GPSSensorThread
-		features
-			in_data: in data port DataTypes::GPSPosition;
-		properties
-			Dispatch_Protocol => Periodic;
-			Period => 500 ms;
-	end GPSSensorThread;
-	
-	process GPSSensorProcess
-	end GPSSensorProcess;
-	
-	process implementation GPSSensorProcess.impl
-		subcomponents
-			prod: thread GPSSensorThread;
-	end GPSSensorProcess.impl;
-	
-
-	thread DepthSensorThread
-		features
-			in_data: in data port DataTypes::Depth;
-		properties
-			Dispatch_Protocol => Periodic;
-			Period => 500 ms;
-	end DepthSensorThread;
-	
-	process DepthSensorProcess
-	end DepthSensorProcess;
-	
-	process implementation DepthSensorProcess.impl
-		subcomponents
-			prod: thread DepthSensorThread;
-	end DepthSensorProcess.impl;
-	
-
-	thread GyroscopeSensorThread
-		features
-			in_data: in data port DataTypes::Gyroscope;
-		properties
-			Dispatch_Protocol => Periodic;
-			Period => 500 ms;
-	end GyroscopeSensorThread;
-	
-	process GyroscopeSensorProcess
-	end GyroscopeSensorProcess;
-	
-	process implementation GyroscopeSensorProcess.impl
-		subcomponents
-			prod: thread GyroscopeSensorThread;
-	end GyroscopeSensorProcess.impl;
-	
-	
-	thread RudderControlThread
-		features
-			out_control: out data port DataTypes::RudderPosition;
-		properties
-			Dispatch_Protocol => Periodic;
-			Period => 500 ms;
-	end RudderControlThread;
-
-	process RudderControlProcess
-	end RudderControlProcess;
-	
-	process implementation RudderControlProcess.impl
-		subcomponents
-			prod: thread RudderControlThread;
-	end RudderControlProcess.impl;
-	
-	
-	thread DataToUserInterfaceThread
+	process DataToUserInterfaceProcess
 		features
 			out_ais: out data port DataTypes::AISUnits;
 			out_wind_dir: out data port DataTypes::ApparentWindDirection;
@@ -149,28 +26,16 @@ public
 			out_gps: out data port DataTypes::GPSPosition;
 			out_depth: out data port DataTypes::Depth;
 			out_gyro: out data port DataTypes::Gyroscope;
-	end DataToUserInterfaceThread;
-	
-	process DataToUserInterfaceProcess
 	end DataToUserInterfaceProcess;
-	
 	process implementation DataToUserInterfaceProcess.impl
-		subcomponents
-			out_data: thread DataToUserInterfaceThread;
 	end DataToUserInterfaceProcess.impl;
-	
-	
-	thread DataFromUserInterfaceThread
+		
+	process NavProcess
 		features
 			in_auto_navigation: in data port DataTypes::AutoNavigation;
-	end DataFromUserInterfaceThread;
-	
-	process DataFromUserInterfaceProcess
-	end DataFromUserInterfaceProcess;
-	
-	process implementation DataFromUserInterfaceProcess.impl
-		subcomponents
-			in_data: thread DataToUserInterfaceThread;
-	end DataFromUserInterfaceProcess.impl;
+			out_rudder_instructions: out data port DataTypes::RudderPosition;
+	end NavProcess;
+	process implementation NavProcess.impl
+	end NavProcess.impl;
 
 end Processes;
