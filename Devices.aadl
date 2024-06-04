@@ -16,6 +16,9 @@ public
 	    features
 	        out_data: out data port DataTypes::AISUnits;
 	        main_bus: requires bus access MainBus.impl;
+	    properties
+	        Dispatch_Protocol => Periodic;
+	        Period => 500 ms;
 	end AISSystem;
 	device implementation AISSystem.impl 
 	end AISSystem.impl;
@@ -25,6 +28,9 @@ public
 	    features
 	        out_data: out data port DataTypes::ApparentWindDirection;
 	        main_bus: requires bus access MainBus.impl;
+	    properties
+	        Dispatch_Protocol => Periodic;
+	        Period => 500 ms;
 	end WindDirectionSensor;
 	device implementation WindDirectionSensor.impl 
 	end WindDirectionSensor.impl;
@@ -33,6 +39,9 @@ public
 	    features
 	        out_data: out data port DataTypes::ApparentWindSpeed;
 	        main_bus: requires bus access MainBus.impl;
+	    properties
+	        Dispatch_Protocol => Periodic;
+	        Period => 500 ms;
 	end WindSpeedSensor;
 	device implementation WindSpeedSensor.impl 
 	end WindSpeedSensor.impl;
@@ -41,6 +50,9 @@ public
 	    features
 	        out_data: out data port DataTypes::Compass;
 	        main_bus: requires bus access MainBus.impl;
+	    properties
+	        Dispatch_Protocol => Periodic;
+	        Period => 500 ms;
 	end CompassSensor;
 	device implementation CompassSensor.impl 
 	end CompassSensor.impl;
@@ -49,6 +61,9 @@ public
 	    features
 	        out_data: out data port DataTypes::GPSPosition;
 	        main_bus: requires bus access MainBus.impl;
+	    properties
+	        Dispatch_Protocol => Periodic;
+	        Period => 500 ms;
 	end GPSSensor;
 	device implementation GPSSensor.impl 
 	end GPSSensor.impl;
@@ -57,6 +72,9 @@ public
 	    features
 	        out_data: out data port DataTypes::Depth;
 	        main_bus: requires bus access MainBus.impl;
+	    properties
+	        Dispatch_Protocol => Periodic;
+	        Period => 500 ms;
 	end DepthSensor;
 	device implementation DepthSensor.impl 
 	end DepthSensor.impl;
@@ -65,6 +83,9 @@ public
 	    features
 	        out_data: out data port DataTypes::Gyroscope;
 	        main_bus: requires bus access MainBus.impl;
+	    properties
+	        Dispatch_Protocol => Periodic;
+	        Period => 500 ms;
 	end GyroscopeSensor;
 	device implementation GyroscopeSensor.impl 
 	end GyroscopeSensor.impl;
@@ -73,6 +94,9 @@ public
 	    features
 	        in_control: in data port DataTypes::RudderPosition;
 	        main_bus: requires bus access MainBus.impl;
+	    properties
+	        Dispatch_Protocol => Periodic;
+	        Period => 500 ms;
 	end Rudder;
 	device implementation Rudder.impl 
 	end Rudder.impl;
@@ -88,6 +112,9 @@ public
 			in_gyro: in data port DataTypes::Gyroscope;
 			out_auto_navigation: out data port DataTypes::AutoNavigation;
 			main_bus: requires bus access MainBus.impl;
+	    properties
+	        Dispatch_Protocol => Periodic;
+	        Period => 500 ms;
 	end UserInterface;
 	device implementation UserInterface.impl 
 	end UserInterface.impl;
