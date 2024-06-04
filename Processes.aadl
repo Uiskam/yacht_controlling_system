@@ -6,15 +6,13 @@ public
 	
 	thread AISSystemThread
 		features
-			out_data: out data port DataTypes::AISUnits;
+			in_data: in data port DataTypes::AISUnits;
 		properties
 			Dispatch_Protocol => Periodic;
 			Period => 500 ms;
 	end AISSystemThread;
 	
 	process AISSystemProcess
-		features
-			out_data: out data port DataTypes::AISUnits;
 	end AISSystemProcess;
 	
 	process implementation AISSystemProcess.impl
@@ -25,15 +23,13 @@ public
 	
 	thread WindDirectionSensorThread
 		features
-			out_data: out data port DataTypes::ApparentWindDirection;
+			in_data: in data port DataTypes::ApparentWindDirection;
 		properties
 			Dispatch_Protocol => Periodic;
 			Period => 500 ms;
 	end WindDirectionSensorThread;
 	
 	process WindDirectionSensorProcess
-		features
-			out_data: out data port DataTypes::ApparentWindDirection;
 	end WindDirectionSensorProcess;
 	
 	process implementation WindDirectionSensorProcess.impl
@@ -44,15 +40,13 @@ public
 
 	thread WindSpeedSensorThread
 		features
-			out_data: out data port DataTypes::ApparentWindSpeed;
+			in_data: in data port DataTypes::ApparentWindSpeed;
 		properties
 			Dispatch_Protocol => Periodic;
 			Period => 500 ms;
 	end WindSpeedSensorThread;
 	
 	process WindSpeedSensorProcess
-		features
-			out_data: out data port DataTypes::ApparentWindSpeed;
 	end WindSpeedSensorProcess;
 	
 	process implementation WindSpeedSensorProcess.impl
@@ -63,15 +57,13 @@ public
 
 	thread CompassSensorThread
 		features
-			out_data: out data port DataTypes::Compass;
+			in_data: in data port DataTypes::Compass;
 		properties
 			Dispatch_Protocol => Periodic;
 			Period => 500 ms;
 	end CompassSensorThread;
 	
 	process CompassSensorProcess
-		features
-			out_data: out data port DataTypes::Compass;
 	end CompassSensorProcess;
 	
 	process implementation CompassSensorProcess.impl
@@ -82,15 +74,13 @@ public
 	
 	thread GPSSensorThread
 		features
-			out_data: out data port DataTypes::GPSPosition;
+			in_data: in data port DataTypes::GPSPosition;
 		properties
 			Dispatch_Protocol => Periodic;
 			Period => 500 ms;
 	end GPSSensorThread;
 	
 	process GPSSensorProcess
-		features
-			out_data: out data port DataTypes::GPSPosition;
 	end GPSSensorProcess;
 	
 	process implementation GPSSensorProcess.impl
@@ -101,15 +91,13 @@ public
 
 	thread DepthSensorThread
 		features
-			out_data: out data port DataTypes::Depth;
+			in_data: in data port DataTypes::Depth;
 		properties
 			Dispatch_Protocol => Periodic;
 			Period => 500 ms;
 	end DepthSensorThread;
 	
 	process DepthSensorProcess
-		features
-			out_data: out data port DataTypes::Depth;
 	end DepthSensorProcess;
 	
 	process implementation DepthSensorProcess.impl
@@ -120,15 +108,13 @@ public
 
 	thread GyroscopeSensorThread
 		features
-			out_data: out data port DataTypes::Gyroscope;
+			in_data: in data port DataTypes::Gyroscope;
 		properties
 			Dispatch_Protocol => Periodic;
 			Period => 500 ms;
 	end GyroscopeSensorThread;
 	
 	process GyroscopeSensorProcess
-		features
-			out_data: out data port DataTypes::Gyroscope;
 	end GyroscopeSensorProcess;
 	
 	process implementation GyroscopeSensorProcess.impl
@@ -139,15 +125,13 @@ public
 	
 	thread RudderControlThread
 		features
-			in_control: in data port DataTypes::RudderPosition;
+			out_control: out data port DataTypes::RudderPosition;
 		properties
 			Dispatch_Protocol => Periodic;
 			Period => 500 ms;
 	end RudderControlThread;
 
 	process RudderControlProcess
-		features
-			in_control: in data port DataTypes::RudderPosition;
 	end RudderControlProcess;
 	
 	process implementation RudderControlProcess.impl
