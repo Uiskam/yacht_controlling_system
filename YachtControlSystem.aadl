@@ -1,13 +1,7 @@
 package YachtControlSystem
 public
-	with Data_Model;
-	with Base_Types;
-	with DataTypes;
 	with Processes;
 	with Devices;
-	
-	-- Processor Component--
-	
 	
 	system YachtControlSystem
 	end YachtControlSystem;
