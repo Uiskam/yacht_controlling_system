@@ -158,5 +158,19 @@ public
 		subcomponents
 			out_data: thread DataToUserInterfaceThread;
 	end DataToUserInterfaceProcess.impl;
+	
+	
+	thread DataFromUserInterfaceThread
+		features
+			in_auto_navigation: in data port DataTypes::AutoNavigation;
+	end DataFromUserInterfaceThread;
+	
+	process DataFromUserInterfaceProcess
+	end DataFromUserInterfaceProcess;
+	
+	process implementation DataFromUserInterfaceProcess.impl
+		subcomponents
+			in_data: thread DataToUserInterfaceThread;
+	end DataFromUserInterfaceProcess.impl;
 
 end Processes;
