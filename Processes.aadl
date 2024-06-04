@@ -35,5 +35,13 @@ public
 	end NavProcess;
 	process implementation NavProcess.impl
 	end NavProcess.impl;
+	
+	process ThrottleProcess
+		features
+			in_throttle_control: in data port DataTypes::ThrottleControl;
+			out_throttle_value: out data port DataTypes::ThrottleValue;
+	end ThrottleProcess;
+	process implementation ThrottleProcess.impl
+	end ThrottleProcess.impl;
 
 end Processes;

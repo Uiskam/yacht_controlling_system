@@ -135,6 +135,20 @@ public
 			Data_Model::Enumerators => ("OFF", "WIND", "DIRECT");
 			Data_Size => 9 Bits;
     end AutoNavigation;
-  
+    
+    data ThrottleControl extends NMEA2000_Header 
+    end ThrottleControl;
+    data implementation ThrottleControl.impl
+        subcomponents
+            lowerBound: data Base_Types::Integer;
+            upperBound: data Base_Types::Integer;
+    end ThrottleControl.impl;
+    
+    data ThrottleValue extends NMEA2000_Header
+    	properties
+    		Data_Model::Data_Representation => Integer;
+            Data_Model::base_type => (classifier (Base_Types::Integer));
+            Data_Size => 36 bits;
+    end ThrottleValue;
   
 end DataTypes;

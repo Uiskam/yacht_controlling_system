@@ -101,6 +101,17 @@ public
 	device implementation Rudder.impl 
 	end Rudder.impl;
 	
+	device Engine
+	    features
+	        in_control: in data port DataTypes::ThrottleValue;
+	        main_bus: requires bus access MainBus.impl;
+	    properties
+	        Dispatch_Protocol => Periodic;
+	        Period => 500 ms;
+	end Engine;
+	device implementation Engine.impl 
+	end Engine.impl;
+	
 	device UserInterface
 		features
 			in_ais: in data port DataTypes::AISUnits;
@@ -111,6 +122,7 @@ public
 			in_depth: in data port DataTypes::Depth;
 			in_gyro: in data port DataTypes::Gyroscope;
 			out_auto_navigation: out data port DataTypes::AutoNavigation;
+			out_throttle_control: out data port DataTypes::ThrottleControl;
 			main_bus: requires bus access MainBus.impl;
 	    properties
 	        Dispatch_Protocol => Periodic;
@@ -118,5 +130,4 @@ public
 	end UserInterface;
 	device implementation UserInterface.impl 
 	end UserInterface.impl;
-	
 end Devices;
